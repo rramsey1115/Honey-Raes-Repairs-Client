@@ -28,10 +28,6 @@ export const CustomerDetails = () => {
           <th scope="row">Address</th>
           <td>{`${customer?.address}`}</td>
         </tr>
-        {/* <tr>
-          <th scope="row">Emergency</th>
-          <td>{ticket?.emergency ? "yes" : "no"}</td>
-        </tr> */}
       </tbody>
     </Table>)
 }
