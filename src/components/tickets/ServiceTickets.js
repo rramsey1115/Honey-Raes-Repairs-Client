@@ -5,7 +5,7 @@ export default function ServiceTickets() {
   return (
     <>
       <h2>Service Tickets</h2>
-      <Link to="/tickets/create">Add</Link>
+      <Link to="/tickets/create"><Button>Add</Button></Link>
       <Outlet />
     </>
   );
