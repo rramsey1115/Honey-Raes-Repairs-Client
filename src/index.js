@@ -30,7 +30,7 @@ root.render(
             <Route index element={<EmployeesList />} />
             <Route path=":id" element={<EmployeeDetails />} />
           </Route>
-          <Route path="custoemrs" element={<Customers />}>
+          <Route path="customers" element={<Customers />}>
             <Route index element={<CustomersList />} />
             <Route path=":id" element={<CustomerDetails />} />
           </Route>
