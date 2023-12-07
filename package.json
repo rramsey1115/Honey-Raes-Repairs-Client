@@ -1,6 +1,6 @@
 {
   "name": "dotnet-honey-client",
-  "proxy": "https://localhost:7075",
+  "proxy": "https://localhost:7143",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
