@@ -12,7 +12,7 @@ function App() {
             <NavLink href="/tickets">Service Tickets</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/custoemrs">Customers</NavLink>
+            <NavLink href="/customers">Customers</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/employees">Employees</NavLink>
