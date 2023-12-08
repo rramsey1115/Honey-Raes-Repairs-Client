@@ -8,3 +8,13 @@ export const getServiceTickets = () => {
 export const getServiceTicketById = (ticketId) => {
   return fetch(`${_apiUrl}/${ticketId}`).then((r) => r.json());
 };
+
+// post a new service ticket
+export const postServiceTicket = async (newTicketObj) => {
+  const res = await fetch(`${_apiUrl}`, {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify(newTicketObj)
+  }).then(res => res.json());
+  return res;
+};
