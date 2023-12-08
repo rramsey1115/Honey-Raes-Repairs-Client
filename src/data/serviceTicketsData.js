@@ -18,3 +18,8 @@ export const postServiceTicket = async (newTicketObj) => {
   }).then(res => res.json());
   return res;
 };
+
+// delete a service ticket
+export const deleteTicket = (ticketId) => {
+  return fetch(`${_apiUrl}`/`${ticketId}`, { method: "DELETE" });
+}
