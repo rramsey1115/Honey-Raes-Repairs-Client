@@ -21,5 +21,5 @@ export const postServiceTicket = async (newTicketObj) => {
 
 // delete a service ticket
 export const deleteTicket = (ticketId) => {
-  return fetch(`${_apiUrl}`/`${ticketId}`, { method: "DELETE" });
+  return fetch(`${_apiUrl}/${ticketId * 1}`, { method: "DELETE" });
 }

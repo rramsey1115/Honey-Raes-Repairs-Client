@@ -1,14 +1,24 @@
 import { useEffect, useState } from "react";
-import { Table } from "reactstrap";
-import { getServiceTickets } from "../../data/serviceTicketsData";
+import { Button, Table } from "reactstrap";
+import { deleteTicket, getServiceTickets } from "../../data/serviceTicketsData";
 import { Link } from "react-router-dom";
 
 export default function TicketsList() {
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
-    getServiceTickets().then(setTickets);
+    getAndSetTix();
   }, []);
+  
+  const getAndSetTix = () => {
+    getServiceTickets().then(data => setTickets(data));
+  }
+  
+  const handleDelete = async (ticketId) => {
+    console.log("delete clicked for ", ticketId);
+    await deleteTicket(ticketId * 1);
+    getAndSetTix();
+  }
 
   return (
     <Table>
@@ -30,6 +40,14 @@ export default function TicketsList() {
             <td>{t.dateCompleted?.split("T")[0] || "Incomplete"}</td>
             <td>
               <Link to={`${t.id}`}>Details</Link>
+            </td>
+            <td>
+              <Button
+                color="danger"
+                value={t.id}
+                size="sm"
+                onClick={(e) => handleDelete(e.target.value)}
+                >Delete</Button>
             </td>
           </tr>
         ))}
