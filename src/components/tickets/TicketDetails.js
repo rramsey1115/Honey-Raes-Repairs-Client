@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Table } from "reactstrap";
+import { Button, Table } from "reactstrap";
 import { getServiceTicketById } from "../../data/serviceTicketsData";
+import { AssignEmployee } from "./AssignEmployee";
 
 export default function TicketDetails() {
   const { id } = useParams();
@@ -38,7 +39,7 @@ export default function TicketDetails() {
         </tr>
         <tr>
           <th scope="row">Employee</th>
-          <td>{ticket.employee?.name || "Unassigned"}</td>
+          <td>{ticket.employee?.name || <AssignEmployee ticket={ticket} getAndSetTicketById={getAndSetTicketById}/>}</td>
         </tr>
         <tr>
           <th scope="row">Completed?</th>
