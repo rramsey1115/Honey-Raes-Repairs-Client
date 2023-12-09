@@ -1,14 +1,29 @@
 import { useEffect, useState } from "react";
-import { Table } from "reactstrap";
-import { getServiceTickets } from "../../data/serviceTicketsData";
+import { Button, Table } from "reactstrap";
+import { copmleteTicket, deleteTicket, getServiceTickets } from "../../data/serviceTicketsData";
 import { Link } from "react-router-dom";
 
 export default function TicketsList() {
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
-    getServiceTickets().then(setTickets);
+    getAndSetTix();
   }, []);
+  
+  const getAndSetTix = () => {
+    getServiceTickets().then(data => setTickets(data));
+  }
+  
+  const handleDelete = async (ticketId) => {
+    console.log("delete clicked for ", ticketId);
+    await deleteTicket(ticketId * 1);
+    getAndSetTix();
+  }
+
+  const handleComplete = async (ticketId) => {
+    await copmleteTicket(ticketId * 1);
+    getAndSetTix();
+  }
 
   return (
     <Table>
@@ -30,6 +45,27 @@ export default function TicketsList() {
             <td>{t.dateCompleted?.split("T")[0] || "Incomplete"}</td>
             <td>
               <Link to={`${t.id}`}>Details</Link>
+            </td>
+            <td>
+              {t.EmployeeId !== null && t.dateCompleted === null ?
+              
+                <Button
+                color="success"
+                value={t.id}
+                size="sm"
+                onClick={(e) => handleComplete(e.target.value)}
+                >Complete</Button>
+                :
+                null
+              }
+            </td>
+            <td>
+              <Button
+                color="danger"
+                value={t.id}
+                size="sm"
+                onClick={(e) => handleDelete(e.target.value)}
+                >Delete</Button>
             </td>
           </tr>
         ))}

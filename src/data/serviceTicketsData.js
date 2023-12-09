@@ -18,3 +18,16 @@ export const postServiceTicket = async (newTicketObj) => {
   }).then(res => res.json());
   return res;
 };
+
+// delete a service ticket
+export const deleteTicket = (ticketId) => {
+  return fetch(`${_apiUrl}/${ticketId * 1}`, { method: "DELETE" });
+}
+
+// complete a ticket
+export const copmleteTicket = async (ticketId) => {
+   return fetch(`${_apiUrl}/${ticketId * 1}/complete`, {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify(ticketId)})
+}
