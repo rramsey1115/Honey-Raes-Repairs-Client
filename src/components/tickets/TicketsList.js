@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Table } from "reactstrap";
-import { deleteTicket, getServiceTickets } from "../../data/serviceTicketsData";
+import { copmleteTicket, deleteTicket, getServiceTickets } from "../../data/serviceTicketsData";
 import { Link } from "react-router-dom";
 
 export default function TicketsList() {
@@ -17,6 +17,11 @@ export default function TicketsList() {
   const handleDelete = async (ticketId) => {
     console.log("delete clicked for ", ticketId);
     await deleteTicket(ticketId * 1);
+    getAndSetTix();
+  }
+
+  const handleComplete = async (ticketId) => {
+    await copmleteTicket(ticketId * 1);
     getAndSetTix();
   }
 
@@ -40,6 +45,19 @@ export default function TicketsList() {
             <td>{t.dateCompleted?.split("T")[0] || "Incomplete"}</td>
             <td>
               <Link to={`${t.id}`}>Details</Link>
+            </td>
+            <td>
+              {t.EmployeeId !== null && t.dateCompleted === null ?
+              
+                <Button
+                color="success"
+                value={t.id}
+                size="sm"
+                onClick={(e) => handleComplete(e.target.value)}
+                >Complete</Button>
+                :
+                null
+              }
             </td>
             <td>
               <Button
