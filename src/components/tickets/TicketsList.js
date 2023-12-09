@@ -26,7 +26,9 @@ export default function TicketsList() {
   }
 
   return (<>
-    <Link to="/tickets/create"><Button color="primary" style={{marginLeft:20}}>Add New Ticket</Button></Link>
+    <Link to="/tickets/create">
+      <Button color="primary" style={{marginLeft:20}}>Add New Ticket</Button>
+    </Link>
     <Table style={{margin: 20}}>
       <thead>
         <tr>
