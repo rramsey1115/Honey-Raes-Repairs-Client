@@ -31,7 +31,7 @@ export const AssignEmployee = ({ticket, getAndSetTicketById}) => {
 
     return (<>
     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle color="warning" caret>Assign</DropdownToggle>
+        <DropdownToggle color="primary" caret>Assign</DropdownToggle>
             <DropdownMenu>
                 <DropdownItem header>Employees</DropdownItem>
                 {employees.map(e => {

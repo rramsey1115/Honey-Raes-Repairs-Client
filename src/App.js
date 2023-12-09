@@ -7,7 +7,7 @@ function App() {
     <>
       <Navbar color="light" expand="sm">
         <Nav navbar>
-          <NavbarBrand href="/tickets">🧑🏻‍💻🪛🛠️ Honey Rae's Repairs </NavbarBrand>
+          <NavbarBrand href="/">🧑🏻‍💻🪛🛠️ Honey Rae's Repairs </NavbarBrand>
           <NavItem>
             <NavLink href="/tickets">Service Tickets</NavLink>
           </NavItem>

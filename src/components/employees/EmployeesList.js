@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Table } from "reactstrap";
+import { Button, Table } from "reactstrap";
 import { Link } from "react-router-dom";
 import { getAllCustomers } from "../../data/customersData";
 import { getAllEmployees } from "../../data/employeesData";
@@ -12,13 +12,13 @@ export const EmployeesList = () => {
   }, []);
 
   return (
-    <Table>
+    <Table style={{margin: 20}}>
       <thead>
         <tr>
           <th>Id</th>
           <th>Name</th>
           <th>Address</th>
-          <th></th>
+          <th>Details</th>
         </tr>
       </thead>
       <tbody>
@@ -28,7 +28,7 @@ export const EmployeesList = () => {
             <td>{e.name}</td>
             <td>{e.specialty}</td>
             <td>
-              <Link to={`${e.id}`}>Details</Link>
+              <Link to={`${e.id}`}><Button color="warning" size="sm">Details</Button></Link>
             </td>
           </tr>
         ))}

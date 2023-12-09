@@ -23,7 +23,7 @@ export default function TicketDetails() {
   }
 
   return (
-    <Table>
+    <Table style={{margin: 20}}>
       <tbody>
         <tr>
           <th scope="row">Customer</th>

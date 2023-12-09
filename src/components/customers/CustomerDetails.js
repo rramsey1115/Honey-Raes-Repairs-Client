@@ -14,7 +14,7 @@ export const CustomerDetails = () => {
   if (!customer) { return null }
 
   return (
-    <Table>
+    <Table style={{margin: 20}}>
       <tbody>
         <tr>
           <th scope="row">Customer Id</th>

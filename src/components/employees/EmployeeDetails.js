@@ -14,7 +14,7 @@ export const EmployeeDetails = () => {
   if (!employee) { return null }
 
   return (
-    <Table>
+    <Table style={{margin: 20}}>
       <tbody>
         <tr>
           <th scope="row">Employee Id</th>

@@ -4,8 +4,9 @@ import { Button } from "reactstrap";
 export default function Employees() {
   return (
     <>
-      <h2>Employees</h2>
-      {/* <Link to="/tickets/create"><Button>Add</Button></Link> */}
+      <div style={{margin: 20}}>
+        <h2>Employees</h2>
+      </div>
       <Outlet />
     </>
   );

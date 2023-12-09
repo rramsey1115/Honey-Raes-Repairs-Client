@@ -27,7 +27,7 @@ export default function CreateTicket() {
   }, [])
 
   return (<>
-  <form><br/>
+  <form style={{margin: 20}}><br/>
     <h3>Submit a Ticket</h3><hr/>
     
     <fieldset>

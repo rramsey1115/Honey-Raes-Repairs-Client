@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Table } from "reactstrap";
+import { Button, Table } from "reactstrap";
 import { Link } from "react-router-dom";
 import { getAllCustomers } from "../../data/customersData";
 
@@ -11,7 +11,7 @@ export const CustomersList = () => {
   }, []);
 
   return (
-    <Table>
+    <Table style={{margin: 20}}>
       <thead>
         <tr>
           <th>Id</th>
@@ -27,7 +27,7 @@ export const CustomersList = () => {
             <td>{c.name}</td>
             <td>{c.address}</td>
             <td>
-              <Link to={`${c.id}`}>Details</Link>
+            <Link to={`${c.id}`}><Button color="warning" size="sm">Details</Button></Link>
             </td>
           </tr>
         ))}
