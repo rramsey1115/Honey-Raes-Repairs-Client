@@ -26,7 +26,7 @@ export default function TicketsList() {
   }
 
   return (<>
-    <Link to="/tickets/create"><Button color="primary">Add Ticket</Button></Link>
+    <Link to="/tickets/create"><Button color="primary" style={{marginLeft:20}}>Add New Ticket</Button></Link>
     <Table style={{margin: 20}}>
       <thead>
         <tr>
@@ -47,7 +47,7 @@ export default function TicketsList() {
             <td>{t.emergency ? "yes" : "no"}</td>
             <td>{t.dateCompleted?.split("T")[0] || "Incomplete"}</td>
             <td>
-              <Link to={`${t.id}`}>Details</Link>
+              <Link to={`${t.id}`}><Button color="warning" size="sm">Details</Button></Link>
             </td>
             <td>
               {t.employeeId !== null &&
