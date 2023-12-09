@@ -5,9 +5,9 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      <Navbar color="info" expand="sm">
+      <Navbar color="light" expand="sm">
         <Nav navbar>
-          <NavbarBrand href="/">Honey Rae's Repairs </NavbarBrand>
+          <NavbarBrand href="/">🧑🏻‍💻🪛🛠️ Honey Rae's Repairs </NavbarBrand>
           <NavItem>
             <NavLink href="/tickets">Service Tickets</NavLink>
           </NavItem>

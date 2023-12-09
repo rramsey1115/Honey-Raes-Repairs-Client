@@ -31,3 +31,12 @@ export const copmleteTicket = async (ticketId) => {
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify(ticketId)})
 }
+
+// assign ticket to an employee
+export const updateTicket = (ticketId, updatedTicketObj) => {
+  return fetch(`${_apiUrl}/${ticketId}`, {
+    method: "PUT",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify(updatedTicketObj)
+  });
+}

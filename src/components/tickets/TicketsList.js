@@ -25,15 +25,18 @@ export default function TicketsList() {
     getAndSetTix();
   }
 
-  return (
-    <Table>
+  return (<>
+    <Link to="/tickets/create"><Button color="primary">Add Ticket</Button></Link>
+    <Table style={{margin: 20}}>
       <thead>
         <tr>
           <th>Id</th>
           <th>Description</th>
           <th>Emergency?</th>
           <th>Date Completed</th>
-          <th></th>
+          <th>Details</th>
+          <th>Complete</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -47,8 +50,8 @@ export default function TicketsList() {
               <Link to={`${t.id}`}>Details</Link>
             </td>
             <td>
-              {t.EmployeeId !== null && t.dateCompleted === null ?
-              
+              {t.employeeId !== null &&
+               t.dateCompleted === null ?
                 <Button
                 color="success"
                 value={t.id}
@@ -71,5 +74,5 @@ export default function TicketsList() {
         ))}
       </tbody>
     </Table>
-  );
+  </>);
 }
