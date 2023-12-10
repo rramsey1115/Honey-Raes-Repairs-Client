@@ -46,3 +46,11 @@ Customer Data
 -------------
 ![Screenshot 2023-12-09 132336](https://github.com/rramsey1115/Honey-Raes-Client/assets/139381892/d7003e0a-c61e-4caf-9822-b97dca1c6d13)
 
+Swagger Endpoints Examples
+-----------
+![HoneyRaes - swagger endpoints](https://github.com/rramsey1115/Honey-Raes-Repairs-Client/assets/139381892/26b8d69f-1b9a-4c75-afd4-b3d0c1a48b76)
+
+![HoneyRaes - swagger endpoints 2](https://github.com/rramsey1115/Honey-Raes-Repairs-Client/assets/139381892/6986d4a7-1dea-4800-a338-bf191599f9b9)
+
+
+
