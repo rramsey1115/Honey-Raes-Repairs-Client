@@ -1,6 +1,7 @@
 Honey Rae's - Client
 ==================
 API repository containing endpoints in C#: 
+https://github.com/rramsey1115/API-HoneyRaesRepairs
 
 Honey Rae's Client is the client-side directory for my full-stack application Honey Rae's Repairs. It is built using React and Reactstrap styling.
 
