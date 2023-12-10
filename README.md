@@ -1,5 +1,7 @@
 Honey Rae's - Client
 ==================
+API repository containing endpoints in C#: 
+
 Honey Rae's Client is the client-side directory for my full-stack application Honey Rae's Repairs. It is built using React and Reactstrap styling.
 
 The purpose of this project was to gain skills writing server-side endpoints in C#, manipulating data in a variety of ways for the client. That being said, the client views were intentionally written to be simple, yet clean and user-friendly.
